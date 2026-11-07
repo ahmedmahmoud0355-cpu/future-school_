@@ -1,0 +1,325 @@
+/* Simple styles for all Future School pages */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #263445;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Navigation */
+header {
+    background-color: #17365d;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 18px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #f2c14e;
+}
+
+/* Home page */
+.hero {
+    background-color: #dce8f4;
+    padding: 75px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #17365d;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #17365d;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.button:hover {
+    background-color: #285783;
+}
+
+.light-button {
+    background-color: #d6a82f;
+    color: #17283d;
+    margin-left: 8px;
+}
+
+.section {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.section-title,
+.page-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.page-heading h1,
+.section-title {
+    color: #17365d;
+}
+
+.page-heading p {
+    margin-top: 8px;
+}
+
+.activity-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card,
+.simple-box,
+.form-box,
+.login-card {
+    background-color: white;
+    border: 1px solid #dce2e8;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+.card h3 {
+    color: #17365d;
+    margin-bottom: 8px;
+}
+
+.highlight {
+    background-color: #e8eef5;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.highlight h2 {
+    color: #17365d;
+}
+
+footer {
+    background-color: #17365d;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* About page */
+.simple-box {
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.stats .card {
+    flex: 1;
+    text-align: center;
+}
+
+.stats h2 {
+    color: #d6a82f;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.team .card {
+    flex: 1 1 220px;
+}
+
+/* News page */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.blog-grid .card {
+    min-height: 190px;
+}
+
+.meta,
+.small-note {
+    color: #687789;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.blog-grid a {
+    color: #17365d;
+}
+
+/* Forms */
+.form-box {
+    max-width: 750px;
+    margin: auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b9c3ce;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #d6a82f;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+.full-width {
+    grid-column: 1 / 3;
+}
+
+/* Contact page */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 20px;
+}
+
+.contact-grid .form-box {
+    width: 100%;
+}
+
+/* Login page */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-card h1 {
+    color: #17365d;
+}
+
+.login-card h2 {
+    margin: 10px 0 20px;
+}
+
+.login-card .button {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.login-card a {
+    color: #17365d;
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .activity-cards,
+    .blog-grid,
+    .contact-grid,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+}
